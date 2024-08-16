@@ -20,4 +20,4 @@ RUN rm Ascend-cann-toolkit_${CANN_VERSION}_linux-x86_64.run
 
 WORKDIR /root
 
-ENTRYPOINT [ "/bin/bash" ]
+CMD [ "/bin/bash", "-c", "source /usr/local/Ascend/ascend-toolkit/set_env.sh && exec /bin/bash" ]
