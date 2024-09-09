@@ -14,9 +14,9 @@ RUN pip install numpy
 
 COPY cann_dir .
 
-RUN chmod +x Ascend-cann-toolkit_${CANN_VERSION}_linux-x86_64.run
-RUN echo "y" | ./Ascend-cann-toolkit_${CANN_VERSION}_linux-x86_64.run --full
-RUN rm Ascend-cann-toolkit_${CANN_VERSION}_linux-x86_64.run
+RUN chmod +x Ascend-cann-toolkit_${CANN_VERSION}_linux-$(arch).run
+RUN echo "y" | ./Ascend-cann-toolkit_${CANN_VERSION}_linux-$(arch).run --full
+RUN rm Ascend-cann-toolkit_${CANN_VERSION}_linux-$(arch).run
 
 WORKDIR /root
 
