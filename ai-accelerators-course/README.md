@@ -10,3 +10,12 @@
    ```bash
    docker build -t ghcr.io/nn-complr-tech/ascendc-community-cann:<cann-version> -f ascend.Dockerfile . --build-arg CANN_VERSION="<cann-version>"
    ```
+   Using buildx to build for x86 and aarch64:
+   - x86
+     ```bash
+     docker buildx build --platform linux/amd64 -t ghcr.io/nn-complr-tech/ascendc-community-cann:<cann-version>-x86_64 -f ascend.Dockerfile . --build-arg CANN_VERSION="<cann-version>" --load
+     ```
+   - aarch64
+     ```bash
+     docker buildx build --platform linux/aarch64 -t ghcr.io/nn-complr-tech/ascendc-community-cann:<cann-version>-aarch64 -f ascend.Dockerfile . --build-arg CANN_VERSION="<cann-version>" --load
+     ```
