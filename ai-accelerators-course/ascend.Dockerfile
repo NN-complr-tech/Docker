@@ -16,7 +16,7 @@ COPY cann_dir .
 
 RUN chmod +x Ascend-cann-toolkit_${CANN_VERSION}_linux-$(arch).run
 RUN echo "y" | ./Ascend-cann-toolkit_${CANN_VERSION}_linux-$(arch).run --full
-RUN rm Ascend-cann-toolkit_${CANN_VERSION}_linux-$(arch).run
+RUN rm *.run
 
 WORKDIR /root
 
