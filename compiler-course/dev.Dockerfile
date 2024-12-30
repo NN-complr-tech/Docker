@@ -2,9 +2,6 @@ FROM ubuntu:22.04
 
 LABEL maintainer="https://github.com/NN-complr-tech"
 
-# Accept build arguments
-ARG ARCH
-
 RUN apt-get update \
     && apt-get install -q -y --no-install-recommends \
         git \
