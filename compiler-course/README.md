@@ -7,11 +7,6 @@ cd Docker/compiler-course/
 ```
 
 ## 1. Build
-### platforms:
-- linux/amd64 - X86
-- linux/aarch64 - aarch64
-- linux/arm64 - ARM
-
 ```bash
-docker buildx build --platform <platforms> -t ghcr.io/nn-complr-tech/compiler-course/dev:latest -f dev.Dockerfile .
+docker buildx build --platform linux/amd64 -t ghcr.io/nn-complr-tech/compiler-course/dev:latest -f dev.Dockerfile .
 ```
