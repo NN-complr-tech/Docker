@@ -9,7 +9,6 @@ cd Docker/compiler-course/
 ## 1. Build
 ### platforms:
 - linux/amd64 - X86
-- linux/aarch64 - aarch64
 - linux/arm64 - ARM
 
 ```bash
