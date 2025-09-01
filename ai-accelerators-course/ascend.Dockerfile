@@ -1,12 +1,13 @@
 FROM ubuntu:22.04
 
-ARG CANN_VERSION="8.0.RC3.alpha001"
+ARG CANN_VERSION="8.2.RC1"
 
 RUN apt-get update \
     && apt-get install -q -y --no-install-recommends \
         cmake \
         git \
         build-essential \
+        gdb \
         python3 \
         python3-pip
 
@@ -20,4 +21,4 @@ RUN rm *.run
 
 WORKDIR /root
 
-CMD [ "/bin/bash", "-c", "source /usr/local/Ascend/ascend-toolkit/set_env.sh && exec /bin/bash" ]
+CMD [ "/bin/bash", "-c", "source /usr/local/Ascend/ascend-toolkit/latest/bin/setenv.bash && exec /bin/bash" ]
