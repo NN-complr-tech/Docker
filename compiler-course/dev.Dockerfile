@@ -15,7 +15,8 @@ RUN apt-get update \
         wget \
         sudo \
         vim \
-        htop
+        htop \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m user \
     && usermod -aG sudo user \
