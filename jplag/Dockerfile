@@ -10,10 +10,12 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y -q --no-install-r
     git \
     curl \
     maven \
-    openjdk-25-jdk
+    openjdk-25-jdk \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash
-RUN apt-get install -y -q --no-install-recommends nodejs
+RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash \
+    && apt-get install -y -q --no-install-recommends nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m user \
     && usermod -aG sudo user \
