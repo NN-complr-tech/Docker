@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-LABEL maintainer="https://github.com/Kuznetsov-Artyom"
+LABEL maintainer="https://github.com/NN-complr-tech"
 
 ARG JPLAG_VERSION="v6.3.0"
 ARG NODE_VERSION="20"
