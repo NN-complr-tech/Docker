@@ -5,6 +5,8 @@ LABEL maintainer="https://github.com/NN-complr-tech"
 ARG JPLAG_VERSION="v6.3.0"
 ARG NODE_VERSION="20"
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 RUN apt-get update && apt-get upgrade -y && apt-get install -y -q --no-install-recommends \
     sudo \
     git \
