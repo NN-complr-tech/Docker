@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 LABEL maintainer="https://github.com/NN-complr-tech"
 
 ARG JPLAG_VERSION="v6.3.0"
-ARG NODE_VERSION="20"
+ARG NODE_VERSION="26"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
